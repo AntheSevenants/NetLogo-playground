@@ -13,7 +13,7 @@ to setup
   clear-all
   create-turtles 100
   ask turtles [
-    set memory (list (biased-number 0.4))
+    set memory (list (biased-number i-bias))
     set avg-form 0
     setxy random-xcor random-ycor
     set label avg-form
@@ -111,9 +111,9 @@ NIL
 
 PLOT
 10
-50
+125
 210
-200
+275
 avg form
 NIL
 NIL
@@ -126,6 +126,39 @@ false
 "" ""
 PENS
 "default" 1.0 0 -16777216 true "" "plot mean [avg-form] of turtles"
+
+PLOT
+10
+290
+210
+440
+avg memory size
+NIL
+NIL
+0.0
+10.0
+0.0
+10.0
+true
+false
+"" ""
+PENS
+"default" 1.0 0 -16777216 true "" "plot mean [length memory] of turtles"
+
+SLIDER
+10
+50
+210
+83
+i-bias
+i-bias
+0
+1
+0.5
+0.05
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
